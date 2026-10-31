@@ -9,13 +9,13 @@
   <title>日课</title>
 
   <!-- iOS / iPadOS 图标 -->
-  <link rel="apple-touch-icon" sizes="512x512" href="web-app-rike-512x512.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="./web-app-rike-512x512.png">
   
   <!-- 浏览器通用 Favicon -->
-  <link rel="icon" type="image/png" sizes="512x512" href="web-app-rike-512x512.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="./web-app-rike-512x512.png">
 
   <!-- Android / Pixel PWA 配置 -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="./manifest.json">
   <meta name="theme-color" content="#ffffff">
 
   <style>
@@ -35,6 +35,11 @@
       display: block;
     }
   </style>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(function() {});
+    }
+  </script>
 </head>
 <body>
   <iframe src="https://script.google.com/macros/s/AKfycby69YsCquWtspBOUNvmMAjYLPntKN6GvMUp9OxOGC_mLqPj9PJAvV1oFJ-G7vI0PDVqGA/exec" allow="fullscreen"></iframe>
